@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width inital-scale=1.0">
         <title>Byeolkii</title>
-        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css?family=Jua:400" rel="stylesheet">
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     </head>
@@ -28,11 +28,33 @@
                 <div class="header_main">
                     <div name="header_main">
                         <h2 class="header_main_title">안녕하세요!</h2>
-                        <p class="header_main_description">기다려 나중에 만들게</p>
+                        <p class="header_main_description">10년생 응애 개발자 별키라고 합니다!</p>
                         <button class="header_main_button" onclick="location.href='https://github.com/byeolki'">Github</button>
                     </div>
                 </div>
+                <div class="header_down" id="down">
+                    <p>⇓ DOWN ⇓</p>
+                </div>
             </header>
+            <script>
+                var hm = `<div class="main">
+                            <div name="description" class="description">
+                                <h1>안 만듬 ㅅㄱ</h1>
+                            </div>
+                        </div>`
+                $("body").one("mousewheel", function (e) {
+                    var wheel = e.originalEvent.wheelDelta;
+                    if (wheel > 0) {
+                        location.reload();
+                    } else {
+                        var div = document.getElementById('down');
+                        div.remove();
+                        $('#container').append(hm); 
+                        location.href('description')
+                    }
+                });
+            </script>
+            </div>
         </div>
     </body>
 </html>
