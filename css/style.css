@@ -1,6 +1,6 @@
 @font-face{
     font-family: abster;
-    src: url(/WEB/MyWeb/font/abster-webfont.woff) format('woff');
+    src: url(../font/abster-webfont.woff) format('woff');
 }
 
 *{
